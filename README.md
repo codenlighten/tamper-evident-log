@@ -21,9 +21,10 @@ Calling a log tamper-*evident* is only honest under those conditions, so they ar
 
 ## Run it
 
-Needs Python 3.12 and a POSIX system (it uses `fcntl` file locks). I ran it only on Linux; macOS should work but is untested.
+Needs Python 3.12 or newer (CI runs 3.12) and a POSIX system (it uses `fcntl` file locks). I ran it only on Linux; macOS should work but is untested.
 
 ```bash
+python3 -m venv .venv && . .venv/bin/activate
 pip install -e ".[dev]"
 pytest                                   # 287 tests, about 8 seconds
 
