@@ -1,5 +1,7 @@
 # tamper-evident-log: a signed, hash-chained log with checkpoints and an offline verifier
 
+[![CI](https://github.com/codenlighten/tamper-evident-log/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/codenlighten/tamper-evident-log/actions/workflows/ci.yml)
+
 An append-only log where every entry is hashed, chained to the one before it and signed with Ed25519; signed Merkle checkpoints (RFC 6962 trees, with inclusion and consistency proofs) that can show truncation; and a verifier that needs only the log file and a public key.
 
 It shows security engineering as evidence: not a claim that nothing can go wrong, but a table of attacks, what the verifier says about each, and the cases it **cannot** detect, each with a test.
